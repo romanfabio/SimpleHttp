@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading;
@@ -15,6 +16,12 @@ namespace Void.SimpleHttp
         {
             _response = response;
         }
+        
+        public HttpStatusCode StatusCode => _response.StatusCode;
+
+        public bool IsSuccessStatusCode => _response.IsSuccessStatusCode;
+
+        public string ReasonPhrase => _response.ReasonPhrase;
 
         public HttpResponseMessage GetRawResponse()
         {
