@@ -2,6 +2,10 @@
 
 A small package that makes it easy to call external REST APIs by providing a simplified abstraction of HttpRequestMessage and HttpResponseMessage classes.
 
+## Installation
+```shell
+dotnet add package Void.SimpleHttp
+```
 
 ## Quick start
 
