@@ -4,7 +4,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
-using System.Text.Json.Nodes;
 
 namespace Void.SimpleHttp
 {
@@ -25,6 +24,24 @@ namespace Void.SimpleHttp
         public SimpleHttpRequestBuilder(HttpMethod method, Uri requestUri)
         {
             _request = new HttpRequestMessage(method, requestUri);
+        }
+        
+        public SimpleHttpRequestBuilder WithMethod(HttpMethod method)
+        {
+            _request.Method = method;
+            return this;
+        }
+
+        public SimpleHttpRequestBuilder WithUri(Uri requestUri)
+        {
+            _request.RequestUri = requestUri;
+            return this;
+        }
+
+        public SimpleHttpRequestBuilder WithUri(string requestUri)
+        {
+            _request.RequestUri = new Uri(requestUri);
+            return this;
         }
 
         public SimpleHttpRequestBuilder WithBearerToken(string token, string prefix = "Bearer")

@@ -36,6 +36,40 @@ public class SimpleHttpRequestBuilderTests
     }
 
     [Fact]
+    public void WithMethod_ShouldSetRequestMethod()
+    {
+        var builder = new SimpleHttpRequestBuilder().WithMethod(HttpMethod.Post);
+
+        var request = builder.Build();
+        
+        Assert.Equal(HttpMethod.Post, request.Method);
+    }
+    
+    [Fact]
+    public void WithUri_ShouldSetRequestUri()
+    {
+        var uri = new Uri("https://example.com");
+        
+        var builder = new SimpleHttpRequestBuilder().WithUri(uri);
+
+        var request = builder.Build();
+        
+        Assert.Equal(uri, request.RequestUri);
+    }
+    
+    [Fact]
+    public void WithUri_ShouldSetRequestStringUri()
+    {
+        const string uri = "https://example.com";
+        
+        var builder = new SimpleHttpRequestBuilder().WithUri(uri);
+
+        var request = builder.Build();
+        
+        Assert.Equal(new Uri(uri), request.RequestUri);
+    }
+
+    [Fact]
     public void WithBearerToken_ShouldBeInitializedWithDefaultPrefix()
     {
         const string token = "example";
