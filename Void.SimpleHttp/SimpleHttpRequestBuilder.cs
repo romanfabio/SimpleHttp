@@ -92,10 +92,6 @@ namespace Void.SimpleHttp
         {
             return _request;
         }
-
-        public static SimpleHttpRequestBuilder CreateRequest()
-        {
-            return new SimpleHttpRequestBuilder();
-        }
+        
     }
 }
