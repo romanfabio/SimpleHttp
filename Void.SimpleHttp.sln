@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Void.SimpleHttp", "Void.SimpleHttp\Void.SimpleHttp.csproj", "{04EB54EC-3534-4AC5-9BDB-F0A2F19C747C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Void.SimpleHttp.Test", "Void.SimpleHttp.Test\Void.SimpleHttp.Test.csproj", "{9FF55E15-414A-475D-ACD5-255B7F160A4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{04EB54EC-3534-4AC5-9BDB-F0A2F19C747C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04EB54EC-3534-4AC5-9BDB-F0A2F19C747C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04EB54EC-3534-4AC5-9BDB-F0A2F19C747C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FF55E15-414A-475D-ACD5-255B7F160A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF55E15-414A-475D-ACD5-255B7F160A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF55E15-414A-475D-ACD5-255B7F160A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF55E15-414A-475D-ACD5-255B7F160A4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
