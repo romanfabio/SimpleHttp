@@ -39,12 +39,6 @@ namespace Void.SimpleHttp
             return this;
         }
 
-        public SimpleHttpRequestBuilder WithJsonBody(JsonNode node, JsonSerializerOptions? options = null)
-        {
-            _request.Content = new StringContent(node.ToJsonString(options), Encoding.UTF8, "application/json");
-            return this;
-        }
-
         public SimpleHttpRequestBuilder WithHeader(string name, string value)
         {
             _request.Headers.Add(name, value);
